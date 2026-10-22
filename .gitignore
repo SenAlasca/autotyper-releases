@@ -1,0 +1,8 @@
+# Nextcloud sync conflicts - merge by hand, never commit
+*(conflicted copy*)*
+*~*.tmp
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
