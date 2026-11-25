@@ -12,22 +12,33 @@ windows/
     ├── SHA256SUMS.txt
     └── README.md                         install + verification notes
 macos/
-└── 0.1.0/
-    ├── Autotyper_0.1.0_universal.dmg     Apple Silicon + Intel, macOS 10.15+
+├── 0.1.0/
+│   ├── Autotyper_0.1.0_universal.dmg     Apple Silicon + Intel, macOS 10.15+
+│   ├── SHA256SUMS.txt
+│   └── README.md
+└── 0.1.1/
+    ├── Autotyper_0.1.1_universal.dmg     Apple Silicon + Intel, macOS 10.15+
     ├── SHA256SUMS.txt
     └── README.md
 ```
 
-## Current version: 0.1.0 (2026-10-22)
+## Current version: 0.1.1 (2026-11-25)
 
-| Platform | File | SHA-256 |
-|---|---|---|
-| Windows | `Autotyper_0.1.0_x64-setup.exe` | `42d84bcd300d69ea7f7edc4e1810d444159866d16778aff32dddef50ee035199` |
-| Windows | `Autotyper_0.1.0_x64_en-US.msi` | `4570ea7134a135d8df69499a4930bb3d9e7df249d016cf88cee6569020ab133d` |
-| macOS | `Autotyper_0.1.0_universal.dmg` | `f76b6b4b10a01907c6071b3ad6dbb9603d2ef384c395d128a0b00de6ce31ad6f` |
+| Version | Platform | File | SHA-256 |
+|---|---|---|---|
+| 0.1.1 | macOS | `Autotyper_0.1.1_universal.dmg` | `5194c25c23f8faec5dd7a651c95c02628a60dabfdf800bfb4e978da6c7ae677d` |
+| 0.1.0 | Windows | `Autotyper_0.1.0_x64-setup.exe` | `42d84bcd300d69ea7f7edc4e1810d444159866d16778aff32dddef50ee035199` |
+| 0.1.0 | Windows | `Autotyper_0.1.0_x64_en-US.msi` | `4570ea7134a135d8df69499a4930bb3d9e7df249d016cf88cee6569020ab133d` |
+| 0.1.0 | macOS | `Autotyper_0.1.0_universal.dmg` | `f76b6b4b10a01907c6071b3ad6dbb9603d2ef384c395d128a0b00de6ce31ad6f` |
 
-The same three files are attached to the `v0.1.0` release in
-`autotyper-desktop`.
+0.1.1 is macOS-only. Windows stays on 0.1.0 until a new Windows build is
+published.
+
+`Autotyper_0.1.1_universal.dmg` is the `autotyper-macos-universal` artifact
+from workflow run
+[#45590439276](https://github.com/SenAlasca/autotyper-desktop/actions/runs/45590439276)
+(2026-11-25, commit `b2d524e`, `main`). The 0.1.0 files are also attached to
+the `v0.1.0` release in `autotyper-desktop`.
 
 Verify a download:
 
@@ -41,7 +52,7 @@ shasum -a 256 -c SHA256SUMS.txt                                  # macOS
 
 ## macOS first run
 
-The DMG is ad-hoc signed, **not notarized**:
+The DMGs are ad-hoc signed, **not notarized**:
 
 1. Right-click the app → **Open**, or
    `xattr -dr com.apple.quarantine /Applications/Autotyper.app`.
